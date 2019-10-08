@@ -15,31 +15,32 @@ for(int i=0;i < input.length;++i){
 }
 
 display(input);
-displayReverse(input);
-displayLess(input,ing);
 displaySum(input);
+displayLess(input,ing);
+displayRE(input);
     }
 
     public static void display(int[] input){
         for(int i=0;i < input.length;++i){
             System.out.print(input[i]+" ");
-            System.out.println();
+
         }
-
+        System.out.println();
     }
-    public static void displayReverse(int[] input){
-
-        for(int i=input.length; i>=0;--i ){
+    public static void displayRE(int[] input){
+        for(int i=(input.length-1);i >= 0;--i){
             System.out.print(input[i]+" ");
-            System.out.println();
-        }
 
+        }
+        System.out.println();
     }
+
     public static void displaySum(int[] input){
        int total =0;
         for(int i=0;i<input.length;++i)
             total = total+input[i];
         System.out.println("the total is "+total);
+
         displayHighAverage(input,total);
     }
     public static void displayLess(int[] input,Scanner ing){
@@ -51,11 +52,12 @@ displaySum(input);
                 System.out.print(input[i]+" ");
             }
         }
+        System.out.println();
     }
     public static void displayHighAverage(int[] input,int total){
         double average;
         average=total/input.length;
-        System.out.println(average);
+        System.out.println("the average is "+average);
 
 
     }
